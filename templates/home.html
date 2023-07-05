@@ -3,11 +3,16 @@
 	<h1>Home Page</h1>
   <div>
     {% for post in posts %}
-        <h3>{{ post.title }}</h3>
-        <!-- this is 1st way of accessing data -->
-        <p>By {{ post["author"] }} on {{ post["date"] }}</p>
-        <!-- this is 2nd way of accessing data -->
-        <p>{{ post.content }}</p>
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.author }}</a>
+              <small class="text-muted">{{ post.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
     {% endfor %}
   </div>
 {% endblock content %}
