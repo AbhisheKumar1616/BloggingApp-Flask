@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 {% block content %}
-	<h1>Home Page</h1>
+  <h1>Blogs and Posts</h1>
   <div>
     {% for post in posts %}
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="#">{{ post.author }}</a>
+              <a class="mr-2" href="#" style="color: rgba(0, 0, 0, 0.7); font-family: cursive;">@<i>{{ post.author }}</i></a>
               <small class="text-muted">{{ post.date_posted }}</small>
             </div>
             <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
